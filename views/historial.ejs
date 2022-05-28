@@ -1,0 +1,34 @@
+<h2 style="color:rgb(77, 40, 238);">Historial</h2>
+
+<% const hayArticulos=articulos.length> 0; %>
+    <% if(hayArticulos){ %>
+
+        <div class="table-responsive">
+            <table class="table table-dark">
+                <tr style="color: yellow;">
+                    <th>Title</th>
+                    <th>Price</th>
+                    <th>Imagen</th>
+                    <th>ID</th>
+                </tr>
+                <% for (const articulo of articulos) {%>
+                    <tr>
+                        <td>
+                            <%=articulo.title%>
+                        </td>
+                        <td>
+                            <%=articulo.price%>
+                        </td>
+                        <td>
+                            <%=articulo.img%>
+                        </td>
+                        <td>
+                            <%=id%>
+                        </td>
+                    </tr>
+                    <%};%>
+            </table>
+        </div>
+        <% } else{ %>
+            <h3 class="alert alert-danger">no se encontraron datos</h3>
+            <% } %>
